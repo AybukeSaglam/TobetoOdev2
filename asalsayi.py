@@ -3,17 +3,18 @@
 # 2, 3, 5, 7, 11........
 
 
-
 sayi = int(input("Bir sayi giriniz: "))
+asalSayi = True
 
 if sayi > 1:
     for i in range (2,sayi):
         if sayi % i == 0 :
-            print("Asal sayı değil")
+            print(str(sayi) + " asal sayı değildir.")
+            asalSayi = False
             break
-        else:
-            print("Sayı asaldır.")
-            break
+    if asalSayi:
+            print(str(sayi)+ " sayı asaldır.")
+        
 
 else:
-    print("geçerli sayı giriniz")
+    print("Geçerli sayı giriniz!")
