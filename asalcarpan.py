@@ -1,4 +1,5 @@
 #5- Kullanıcıdan girilen sayının asal çarpanlarını bulan bir program yazınız. 
+# Tekrarlayan asal çarpanları verir
 
 sayi = int(input("Bir sayı girin: "))  # Kullanıcıdan bir sayı girildi
 
@@ -20,3 +21,22 @@ else:
 
 
 
+#Asal Çarpanları bir kere gösterir
+
+sayi = int(input("Bir sayı giriniz: "))
+
+asalCarpanListe = []
+tempSayi= sayi
+
+asalCarpan = False
+for i in range(2,sayi+1):
+
+    while tempSayi%i ==0:
+        tempSayi = int(tempSayi/i)
+        asalCarpan = True # yalnızca bir kere eklemesi için
+
+    if asalCarpan:
+        asalCarpanListe.append(i)
+        asalCarpan = False 
+
+print(f"{sayi} sayısı için asal çarpan listesi: {asalCarpanListe}")
